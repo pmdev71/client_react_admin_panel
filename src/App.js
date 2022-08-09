@@ -4,7 +4,7 @@ import List from './pages/list/List';
 import New from './pages/new/New';
 import Single from './pages/single/Single';
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
