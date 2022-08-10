@@ -5,8 +5,11 @@ import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import SubtitlesOutlinedIcon from '@mui/icons-material/SubtitlesOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -20,7 +23,10 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <Brightness4OutlinedIcon className="icon" />
+            <Brightness4OutlinedIcon
+              className="icon"
+              onClick={() => dispatch({ type: 'TOGGLE' })}
+            />
           </div>
           <div className="item">
             <NotificationsOutlinedIcon className="icon" />
